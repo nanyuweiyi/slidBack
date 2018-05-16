@@ -5,7 +5,7 @@
 
 1、implementation 'com.github.nanyuweiyi:slidBack:1.0.0'
 
-2、
+2、具体使用
 ```
 @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
