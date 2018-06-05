@@ -1,11 +1,13 @@
 # slidBack
 侧滑返回
 
-使用：
+使用
 
-1、implementation 'com.github.nanyuweiyi:slidBack:1.0.0'
+```
+implementation 'com.github.nanyuweiyi:slidBack:1.0.1'
+```
 
-2、具体使用
+在Aactivity或Fragment中调用
 ```
 @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
