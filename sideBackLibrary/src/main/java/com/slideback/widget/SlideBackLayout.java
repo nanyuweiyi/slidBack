@@ -420,14 +420,6 @@ public class SlideBackLayout extends FrameLayout {
         }
     }
 
-    public void edgeOnly(boolean edgeOnly) {
-        mEdgeOnly = edgeOnly;
-    }
-
-    public boolean isEdgeOnly() {
-        return mEdgeOnly;
-    }
-
     public void lock(boolean lock) {
         mLock = lock;
     }

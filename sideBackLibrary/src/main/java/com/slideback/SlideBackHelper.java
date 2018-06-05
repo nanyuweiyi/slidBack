@@ -19,7 +19,6 @@ import com.slideback.widget.SlideBackLayout;
  * Created by Oubowu on 2016/9/22 0022 14:31.
  * 侧滑处理
  */
-// TODO: 2016/9/24 添加了上个页面的布局，如果页面有Toolbar的话其不随屏幕旋转而大小变化，永远维持进入时的宽高比
 public class SlideBackHelper {
 
     public static ViewGroup getDecorView(Activity activity) {

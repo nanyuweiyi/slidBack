@@ -13,13 +13,13 @@ import java.util.HashMap;
 /**
  * ===============================
  * 描    述：SlideBackLayoutUtils
- * 作    者：pjw
+ * 作    者：tnn
  * 创建日期：2017/12/20 17:28
  * ===============================
  */
 public class SlideBackLayoutUtils {
 
-    private static HashMap<Activity, SlideBackLayout> mBackLayoutHashMap = new HashMap<>(3);
+    private static HashMap<Activity, SlideBackLayout> mBackLayoutHashMap = new HashMap<>();
 
     /**
      * 设置侧滑返回，默认配置
@@ -28,7 +28,7 @@ public class SlideBackLayoutUtils {
         sideBack(activity, getDefaultSlideConfig(), null);
     }
 
-    public static void sideBack(Activity activity, SlideConfig slideConfig, OnSlideListenerAdapter adapter) {
+    private static void sideBack(Activity activity, SlideConfig slideConfig, OnSlideListenerAdapter adapter) {
         SlideBackHelper slideBackHelper = new SlideBackHelper();
         SlideBackLayout slideBackLayout = slideBackHelper.attach(
                 // 当前Activity
@@ -44,12 +44,10 @@ public class SlideBackLayoutUtils {
         mBackLayoutHashMap.put(activity, slideBackLayout);
         //添加到栈
         App.sApp.getActivityHelper().setActivityInfo(activity, slideBackLayout, slideBackHelper);
-//        //边缘响应的最大值
-//        slideBackLayout.setEdgeRangePercent(0.2f);
+        //边缘响应的最大值
+        slideBackLayout.setEdgeRangePercent(0.1f);
 //        //非快速滑动，关闭页面的最小值
 //        slideBackLayout.setSlideOutRangePercent(0.3f);
-//        //是否关闭全局侧滑，默认开启全局侧滑
-//        slideBackLayout.edgeOnly(true);
 //        //是否关闭侧滑，默认开启侧滑
 //        slideBackLayout.lock(false);
     }
